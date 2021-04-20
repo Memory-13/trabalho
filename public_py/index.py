@@ -1,13 +1,7 @@
 
-n = int(input('Digite um valor: '))
+N = int(input('digite um número:'))
 
-soma = 0
+def func(N):
+    return sum([x for x in range(N -1, 0, -1) if x % 3 == 0 or x % 5 == 0])
 
-while True:
-    while n >= 0:
-        if n / 3 == 0 or n / 5 == 0:
-            soma = soma + n
-            print(soma, end='->')
-        n = n - 1
-    if n == 0:
-        break
+print(func(N))
